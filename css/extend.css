@@ -1,24 +1,33 @@
+html, body {
+  width: auto !important;
+  overflow-x: hidden !important;
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
 }
 .navbar-brand {
 }
 
-.jumbotron {
-    background-image: url("../images/hero_bg_img.jpg");
-    background-size: 613px; 
-	  min-height: 370px;
-  	background-position: top right;
-  	background-repeat: no-repeat;
-  	color: black;
-  	background-color: #ace4da;
-  	height: auto;
-  	margin-bottom: 0;
-    padding-left: 50px;
+.hero-section {
+  background-image: url("../images/hero_bg_img.jpg");
+  background-size: 613px; 
+  min-height: 370px;
+	background-position: top right;
+	background-repeat: no-repeat;
+	color: black;
+	background-color: #ace4da;
+	height: auto;
+	margin-bottom: 0;
+  padding-top: 20px;
+}
+
+.hero-section .container {
+  padding: 0 20px;
 }
 
 @media (max-width: 850px) { 
-.jumbotron {
+  .hero-section {
     background-image: url("../images/hero_bg_img.jpg");
 	  min-height: 300px;
 	  background-position: top center;
@@ -27,13 +36,12 @@ body {
   	color: black;
   	background-color: black;
   	margin-bottom: 0;
-  	}
+  }
 }
 
 #whyus_section {
 	background: #ffffff;
   padding-bottom: 30px;
-
 }
 
 #whyus_element {
@@ -49,8 +57,7 @@ body {
 
 }
 #jumbotron_text {
-  width: 40%;
-  position: absolute;
+  
 }
 
 .navbar-inverse {
