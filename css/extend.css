@@ -7,6 +7,18 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+.margin-0 {
+  margin: 0;
+}
+
+.padding-0 {
+  padding: 0;
+}
+
+.padding-btm-10 {
+  padding-bottom: 10px;
+}
+
 .navbar-brand {
 }
 
@@ -64,11 +76,6 @@ body {
   border-color: #000000;
 }
 
-#quote_section {
-  background-color: #f0f2f5;
-  width: 100%;
-}
-
 #myFooter {
   padding-top: 30px;
 }
@@ -115,4 +122,143 @@ body {
 
 .accordion-toggle.active {
   color: #ff0000;
+}
+
+#quote_section {
+  background-color: #f0f2f5;
+  width: 100%;
+  padding: 20px 15px;
+}
+
+.quote-container {
+
+}
+
+.quote-header {
+  font-size: 24px;
+  color: #fff;
+  background: #bed395;
+  padding: 5px 10px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.quote-body {
+  padding: 10px;
+  background: #fff;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.quote-body p {
+  margin-bottom: 20px;
+}
+
+.quote-hr {
+  border-top: 1px solid #a6e231;
+  margin: 10px 0;
+}
+
+.backdrop-img {
+  width: 100%;
+}
+
+.backdrop-img-2 {
+  width: 80%;
+}
+
+.backdrop-h6 {
+  margin-top: 0;
+  font-size: 14px;
+}
+
+.backdrop-col-right {
+  border-left: 1px solid #a6e231;
+  padding-bottom: 10px;
+}
+
+.backdrop-row .quote-hr {
+  margin-top: 0;
+}
+
+.backdrop-form .control-label {
+  text-align: left;
+}
+
+.submit-job-btn {
+  font-size: 12px;
+  background: #ed5565;
+  color: #fff;
+  border-color: #ed5565;
+}
+
+.submit-job-btn:hover {
+  background: #fff;
+  color: #ed5565;
+  border-color: #ed5565;
+}
+
+.estimated-cost p {
+  margin: 0;
+  font-size: 12px;
+}
+
+.estimated-cost h3 {
+  margin: 0;
+  font-size: 30px;
+  color: #a6e231;
+}
+
+.estimated-cost {
+  padding-right: 0;
+}
+
+.print-type-btn {
+  padding: 6px 25px !important;
+  margin: 5px 10px;
+  font-size: 12px;
+}
+
+.print-type-btn.active,
+.print-type-btn.active:hover,
+.print-type-btn.active.focus {
+  background: #ed5565;
+  border-color: #ed5565;
+  color: #fff;
+  box-shadow: none;
+  outline: none;
+}
+
+.print-type-btn,
+.print-type-btn:hover {
+  background: #d4d4d4;
+  border-color: #d4d4d4;
+}
+
+.print-type-alert {
+  background: #4fc0e8;
+  color: #fff;
+  border-color: #4fc0e8;
+  margin-bottom: 5px;
+  padding: 10px;
+}
+
+.backdrop-col {
+  padding: 10px;
+}
+
+.width-col {
+  padding-left: 0;
+  padding-right: 5px;
+  font-size: 12px;
+}
+
+.height-col {
+  padding-right: 0;
+  padding-left: 5px;
+  font-size: 12px;
+}
+
+.custom-size-col {
+  padding-left: 0;
 }
