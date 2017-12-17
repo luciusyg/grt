@@ -192,6 +192,13 @@ body {
   border-color: #ed5565;
 }
 
+.submit-job-btn:focus {
+  background: #ed5565;
+  color: #fff;
+  border-color: #ed5565;
+  outline: none;
+}
+
 .submit-job-btn:hover {
   background: #fff;
   color: #ed5565;

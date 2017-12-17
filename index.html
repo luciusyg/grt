@@ -11,6 +11,7 @@
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/Footer-with-button-logo.css">
     <link href="css/extend.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.min.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -141,7 +142,7 @@
                 <div class="form-group">
                   <label for="event-date" class="col-sm-3 control-label">EVENT DATE</label>
                   <div class="col-sm-9">
-                    <input type="text" class="form-control" id="event-date">
+                    <input type="text" class="form-control datepicker" id="event-date" name="event-date" data-provide="datepicker">
                   </div>
                 </div>
                 <div class="form-group">
@@ -174,7 +175,7 @@
                 <div class="form-group">
                   <div class="col-sm-7 estimated-cost">
                     <p>Estimated Cost</p>
-                    <h3>SGD 2,000</h3>
+                    <h3>SGD <span class="calculated-cost">1,164</span></h3>
                     <p>Please note that the above cost estimate is a close indicative and might fluctuate depend on your additional requests</p>
                   </div>
                   <div class="col-sm-5 text-right">
@@ -220,7 +221,7 @@
                 <div class="form-group">
                   <label for="event-date" class="col-sm-3 control-label">EVENT DATE</label>
                   <div class="col-sm-9">
-                    <input type="text" class="form-control" id="event-date">
+                    <input type="text" class="form-control datepicker" id="event-date" name="event-date" data-provide="datepicker">
                   </div>
                 </div>
                 <div class="form-group">
@@ -253,7 +254,7 @@
                 <div class="form-group">
                   <div class="col-sm-7 estimated-cost">
                     <p>Estimated Cost</p>
-                    <h3>SGD 2,000</h3>
+                    <h3>SGD <span class="calculated-cost">2,329.60</span></h3>
                     <p>Please note that the above cost estimate is a close indicative and might fluctuate depend on your additional requests</p>
                   </div>
                   <div class="col-sm-5 text-right">
@@ -320,17 +321,17 @@
                 <div class="form-group">
                   <div class="col-xs-6 text-center">
                     <img src="images/supporting_panel_icon.gif" alt="" class="backdrop-img-2">
-                    <div class="checkbox">
+                    <div class="radio">
                       <label>
-                        <input type="checkbox" name="additional-panels" id="side-panels" value="side-panels"> Yes
+                        <input type="radio" name="additional-panels" id="side-panels" value="side-panels" checked> Yes
                       </label>
                     </div>
                   </div>
                   <div class="col-xs-6 text-center">
                     <img src="images/back_supporting_panel_icon.gif" alt="" class="backdrop-img-2">
-                    <div class="checkbox">
+                    <div class="radio">
                       <label>
-                        <input type="checkbox" name="additional-panels" id="back-panels" value="back-panels"> Yes
+                        <input type="radio" name="additional-panels" id="back-panels" value="back-panels"> Yes
                       </label>
                     </div>
                   </div>
@@ -339,7 +340,7 @@
                 <div class="form-group">
                   <label for="event-date" class="col-sm-3 control-label">EVENT DATE</label>
                   <div class="col-sm-9">
-                    <input type="text" class="form-control" id="event-date">
+                    <input type="text" class="form-control datepicker" id="event-date" name="event-date" data-provide="datepicker">
                   </div>
                 </div>
                 <div class="form-group">
@@ -372,7 +373,7 @@
                 <div class="form-group">
                   <div class="col-sm-7 estimated-cost">
                     <p>Estimated Cost</p>
-                    <h3>SGD 2,000</h3>
+                    <h3>SGD <span class="calculated-cost">0</span></h3>
                     <p>Please note that the above cost estimate is a close indicative and might fluctuate depend on your additional requests</p>
                   </div>
                   <div class="col-sm-5 text-right">
@@ -495,6 +496,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bootstrap/js/bootstrap.min.js"></script>
-    <script src="index.js"></script>
+    <script src="js/bootstrap-datepicker.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>
