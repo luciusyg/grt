@@ -10,7 +10,26 @@ $(document).ready(function() {
 
 $('#photo-wall-form, #custom-form, #stage-form').submit(function(e) {
   e.preventDefault();
-  var $inputs = $('#photo-wall-form :input');
+  name = $(this).attr('id');
+  var $inputs = $(`#${name} :input`);
+
+  event_date = $(`#${name} #event-date`).val();
+  height = $(`#${name} #height`).val();
+  width = $(`#${name} #width`).val();
+  contact = $(`#${name} #contact`).val();
+  email = $(`#${name} #email`).val();
+
+  if (event_date == '') {
+    $(`#${name} .event-date-alert`).removeClass('hidden');
+  } else {
+    $(`#${name} .event-date-alert`).addClass('hidden');
+  }
+
+  if (height < 8 || width < 8) {
+    $(`#${name} .size-alert`).removeClass('hidden');
+  } else {
+    $(`#${name} .size-alert`).addClass('hidden');
+  }
 
   // not sure if you wanted this, but I thought I'd add it.
   // get an associative array of just the values.
@@ -20,6 +39,8 @@ $('#photo-wall-form, #custom-form, #stage-form').submit(function(e) {
   });
 
   console.log(values);
+
+  window.location = `thank-you.html?email=${email}&contact=${contact}`;
 });
 
 $('#photo-wall-form, #custom-form, #stage-form').change(function() {
@@ -39,7 +60,10 @@ $('#photo-wall-form, #custom-form, #stage-form').change(function() {
     additional_panels = $(`#${name} [name=additional-panels]:checked`).val();
 
     if (additional_panels == 'back-panels') {
+      $('#side-panels').parent().removeClass('active');
       cost += 40;
+    } else {
+      $('#back-panels').parent().removeClass('active');
     }
   }
 

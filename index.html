@@ -35,7 +35,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#"><img src="images/greate_logo.png" alt="Greate Nav Bar Logo" style="height:25px"> </a>
+        <a class="navbar-brand" href="index.html"><img src="images/greate_logo.png" alt="Greate Nav Bar Logo" style="height:25px"> </a>
       </div>
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -50,10 +50,8 @@
   <!-- Nav Bar End -->
   <!-- Hero Section -->
   <div class="hero-section">
-    <div class="container" id="jumbotron_text">
-      <h1 class="display-3">Hello, world!</h1>
-      <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra.</p>
-      <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+    <div class="container text-center" id="jumbotron_text">
+      <h2 class="hero-title">Simplifying Your Event's Production</h2>
     </div>
   </div>
   <!-- Hero Section End -->
@@ -112,7 +110,7 @@
             <i class="fa fa-camera"></i> COMMON PHOTO WALL
           </div>
           <div class="quote-body">
-            <p>This is the most common backdrop configuration that will ensure presence and audience impact</p>
+            <p class="text-center">This is the most common backdrop configuration that will ensure presence and audience impact</p>
             <hr class="quote-hr">
             <div class="row">
               <div class="col-xs-6 text-center">
@@ -146,38 +144,82 @@
               <div class="form-group">
                 <label for="delivery-timing" class="col-sm-3 control-label">DELIVERY TIMING</label>
                 <div class="col-sm-9">
-                  <div class="radio">
-                    <label>
-                      <input type="radio" name="delivery-timing" id="delivery-timing-1" value="weekday" checked> Weekday 9am - 6pm
+                  <div data-toggle="buttons">
+                    <label class="btn btn-success active custom-radio">
+                      <input type="radio" name="delivery-timing" id="delivery-timing-1" value="weekday" autocomplete="off" checked>
+                      <span class="fa fa-circle"></span>
                     </label>
-                    <label>
-                      <input type="radio" name="delivery-timing" id="delivery-timing-2" value="weekend"> Weekend / Public Holidays / 6pm - 9am
+                    Weekday 9am - 6pm
+                    <br>
+                    <label class="btn btn-success custom-radio">
+                      <input type="radio" name="delivery-timing" id="delivery-timing-2" value="weekend" autocomplete="off">
+                      <span class="fa fa-circle"></span>
                     </label>
+                    Weekend / Public Holidays / 6pm - 9am
                   </div>
                 </div>
               </div>
               <div class="form-group">
                 <label for="teardown-timing" class="col-sm-3 control-label">TEARDOWN TIMING</label>
                 <div class="col-sm-9">
-                  <div class="radio">
-                    <label>
-                      <input type="radio" name="teardown-timing" id="teardown-timing-1" value="weekday" checked> Weekday 9am - 6pm
+                  <div data-toggle="buttons">
+                    <label class="btn btn-success active custom-radio">
+                      <input type="radio" name="teardown-timing" id="teardown-timing-1" value="weekday" checked>
+                      <span class="fa fa-circle"></span>
                     </label>
-                    <label>
-                      <input type="radio" name="teardown-timing" id="teardown-timing-2" value="weekend"> Weekend / Public Holidays / 6pm - 9am
+                    Weekday 9am - 6pm
+                    <br>
+                    <label class="btn btn-success custom-radio">
+                      <input type="radio" name="teardown-timing" id="teardown-timing-2" value="weekend">
+                      <span class="fa fa-circle"></span>
                     </label>
+                    Weekend / Public Holidays / 6pm - 9am
                   </div>
                 </div>
               </div>
+              <div class="alert alert-success event-date-alert hidden" role="alert"><i class="fa fa-exclamation-circle"></i> Oops you need to select the event date!</div>
               <hr class="quote-hr">
               <div class="form-group">
-                <div class="col-sm-7 estimated-cost">
+                <div class="col-xs-7 estimated-cost">
                   <p>Estimated Cost</p>
                   <h3>SGD <span class="calculated-cost">1,164</span></h3>
+                </div>
+                <div class="col-xs-5 text-right">
+                  <a data-toggle="collapse" data-target="#photowall-user-form" class="btn btn-default submit-job-btn">Lets Go</a>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-xs-12">
                   <p>Please note that the above cost estimate is a close indicative and might fluctuate depend on your additional requests</p>
                 </div>
-                <div class="col-sm-5 text-right">
-                  <button type="submit" class="btn btn-default submit-job-btn">Submit Job</button>
+              </div>
+              <div id="photowall-user-form" class="collapse">
+                <div class="form-group">
+                  <div class="col-xs-12">
+                    <hr class="quote-hr">
+                    <textarea class="form-control" rows="3" id="instructions" name="instructions" placeholder="ANY ADDITIONAL INSTRUCTIONS?"></textarea>
+                  </div>
+                </div>
+                <hr class="quote-hr">
+                <div class="form-group">
+                  <div class="col-xs-12">
+                    <input type="text" class="form-control" id="name" name="name" placeholder="YOUR NAME">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-xs-12">
+                    <input type="text" class="form-control" id="email" name="email" placeholder="YOUR EMAIL">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-xs-12">
+                    <input type="text" class="form-control" id="contact" name="contact" placeholder="YOUR CONTACT NO">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-xs-offset-7 col-xs-5 text-right">
+                    <button type="submit" class="btn btn-default submit-job-btn">Submit Job</button>
+                  </div>
                 </div>
               </div>
             </form>
@@ -190,7 +232,7 @@
             <i class="fa fa-camera"></i> COMMON STAGE
           </div>
           <div class="quote-body">
-            <p>This is the most common backdrop configuration that will ensure presence and audience impact</p>
+            <p class="text-center">This is the most common backdrop configuration that will ensure presence and audience impact</p>
             <hr class="quote-hr">
             <div class="row">
               <div class="col-xs-6 text-center">
@@ -224,38 +266,82 @@
               <div class="form-group">
                 <label for="delivery-timing" class="col-sm-3 control-label">DELIVERY TIMING</label>
                 <div class="col-sm-9">
-                  <div class="radio">
-                    <label>
-                      <input type="radio" name="delivery-timing" id="delivery-timing-1" value="weekday" checked> Weekday 9am - 6pm
+                  <div data-toggle="buttons">
+                    <label class="btn btn-success active custom-radio">
+                      <input type="radio" name="delivery-timing" id="delivery-timing-1" value="weekday" checked>
+                      <span class="fa fa-circle"></span>
                     </label>
-                    <label>
-                      <input type="radio" name="delivery-timing" id="delivery-timing-2" value="weekend"> Weekend / Public Holidays / 6pm - 9am
+                    Weekday 9am - 6pm
+                    <br>
+                    <label class="btn btn-success custom-radio">
+                      <input type="radio" name="delivery-timing" id="delivery-timing-2" value="weekend">
+                      <span class="fa fa-circle"></span>
                     </label>
+                    Weekend / Public Holidays / 6pm - 9am
                   </div>
                 </div>
               </div>
               <div class="form-group">
                 <label for="teardown-timing" class="col-sm-3 control-label">TEARDOWN TIMING</label>
                 <div class="col-sm-9">
-                  <div class="radio">
-                    <label>
-                      <input type="radio" name="teardown-timing" id="teardown-timing-1" value="weekday" checked> Weekday 9am - 6pm
+                  <div data-toggle="buttons">
+                    <label class="btn btn-success active custom-radio">
+                      <input type="radio" name="teardown-timing" id="teardown-timing-1" value="weekday" checked>
+                      <span class="fa fa-circle"></span>
                     </label>
-                    <label>
-                      <input type="radio" name="teardown-timing" id="teardown-timing-2" value="weekend"> Weekend / Public Holidays / 6pm - 9am
+                    Weekday 9am - 6pm
+                    <br>
+                    <label class="btn btn-success custom-radio">
+                      <input type="radio" name="teardown-timing" id="teardown-timing-2" value="weekend">
+                      <span class="fa fa-circle"></span>
                     </label>
+                    Weekend / Public Holidays / 6pm - 9am
                   </div>
                 </div>
               </div>
+              <div class="alert alert-success event-date-alert hidden" role="alert"><i class="fa fa-exclamation-circle"></i> Oops you need to select the event date!</div>
               <hr class="quote-hr">
               <div class="form-group">
-                <div class="col-sm-7 estimated-cost">
+                <div class="col-xs-7 estimated-cost">
                   <p>Estimated Cost</p>
                   <h3>SGD <span class="calculated-cost">2,329.60</span></h3>
+                </div>
+                <div class="col-xs-5 text-right">
+                  <a data-toggle="collapse" data-target="#common-user-form" class="btn btn-default submit-job-btn">Lets Go</a>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-xs-12">
                   <p>Please note that the above cost estimate is a close indicative and might fluctuate depend on your additional requests</p>
                 </div>
-                <div class="col-sm-5 text-right">
-                  <button type="submit" class="btn btn-default submit-job-btn">Submit Job</button>
+              </div>
+              <div id="common-user-form" class="collapse">
+                <div class="form-group">
+                  <div class="col-xs-12">
+                    <hr class="quote-hr">
+                    <textarea class="form-control" rows="3" id="instructions" name="instructions" placeholder="ANY ADDITIONAL INSTRUCTIONS?"></textarea>
+                  </div>
+                </div>
+                <hr class="quote-hr">
+                <div class="form-group">
+                  <div class="col-xs-12">
+                    <input type="text" class="form-control" id="name" name="name" placeholder="YOUR NAME">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-xs-12">
+                    <input type="text" class="form-control" id="email" name="email" placeholder="YOUR EMAIL">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-xs-12">
+                    <input type="text" class="form-control" id="contact" name="contact" placeholder="YOUR CONTACT NO">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-xs-offset-7 col-xs-5 text-right">
+                    <button type="submit" class="btn btn-default submit-job-btn">Submit Job</button>
+                  </div>
                 </div>
               </div>
             </form>
@@ -268,7 +354,7 @@
             <i class="fa fa-camera"></i> CUSTOM BACKDROP
           </div>
           <div class="quote-body">
-            <p>This is the most common backdrop configuration that will ensure presence and audience impact</p>
+            <p class="text-center">This is the most common backdrop configuration that will ensure presence and audience impact</p>
             <hr class="quote-hr">
             <div class="row">
               <div class="col-xs-12">
@@ -276,7 +362,7 @@
               </div>
             </div>
             <form class="form-horizontal backdrop-form" id="custom-form">
-              <div class="form-group">
+              <div class="form-group table-row">
                 <div class="col-xs-6 text-center">
                   <img src="images/cus_backdrop_size_icon.gif" alt="" class="backdrop-img">
                 </div>
@@ -289,6 +375,7 @@
                   </div>
                 </div>
               </div>
+              <div class="alert alert-success size-alert hidden" role="alert"><i class="fa fa-exclamation-circle"></i> Darn... our smallest size is 8x8 ft</div>
               <hr class="quote-hr">
               <div class="form-group">
                 <div class="col-xs-12 text-center">
@@ -305,7 +392,7 @@
                   </div>
                 </div>
               </div>
-              <div class="alert alert-success print-type-alert" role="alert"><i class="fa fa-exclamation-circle"></i> You need to select either option</div>
+              <div class="alert alert-success print-type-alert hidden" role="alert"><i class="fa fa-exclamation-circle"></i> You need to select either option</div>
               <hr class="quote-hr">
               <div class="row">
                 <div class="col-xs-12">
@@ -315,18 +402,22 @@
               <div class="form-group">
                 <div class="col-xs-6 text-center">
                   <img src="images/supporting_panel_icon.gif" alt="" class="backdrop-img-2">
-                  <div class="radio">
-                    <label>
-                      <input type="radio" name="additional-panels" id="side-panels" value="side-panels" checked> Yes
+                  <div data-toggle="buttons">
+                    <label class="btn btn-success active custom-checkbox">
+                      <input type="radio" name="additional-panels" id="side-panels" value="side-panels" checked>
+                      <span class="fa fa-check"></span>
                     </label>
+                    Yes
                   </div>
                 </div>
                 <div class="col-xs-6 text-center">
                   <img src="images/back_supporting_panel_icon.gif" alt="" class="backdrop-img-2">
-                  <div class="radio">
-                    <label>
-                      <input type="radio" name="additional-panels" id="back-panels" value="back-panels"> Yes
+                  <div data-toggle="buttons">
+                    <label class="btn btn-success custom-checkbox">
+                      <input type="radio" name="additional-panels" id="back-panels" value="back-panels">
+                      <span class="fa fa-check"></span>
                     </label>
+                    Yes
                   </div>
                 </div>
               </div>
@@ -340,61 +431,76 @@
               <div class="form-group">
                 <label for="delivery-timing" class="col-sm-3 control-label">DELIVERY TIMING</label>
                 <div class="col-sm-9">
-                  <div class="radio">
-                    <label>
-                      <input type="radio" name="delivery-timing" id="delivery-timing-1" value="weekday" checked> Weekday 9am - 6pm
+                  <div data-toggle="buttons">
+                    <label class="btn btn-success active custom-radio">
+                      <input type="radio" name="delivery-timing" id="delivery-timing-1" value="weekday" checked>
+                      <span class="fa fa-circle"></span>
                     </label>
-                    <label>
-                      <input type="radio" name="delivery-timing" id="delivery-timing-2" value="weekend"> Weekend / Public Holidays / 6pm - 9am
+                    Weekday 9am - 6pm
+                    <br>
+                    <label class="btn btn-success custom-radio">
+                      <input type="radio" name="delivery-timing" id="delivery-timing-2" value="weekend">
+                      <span class="fa fa-circle"></span>
                     </label>
+                    Weekend / Public Holidays / 6pm - 9am
                   </div>
                 </div>
               </div>
               <div class="form-group">
                 <label for="teardown-timing" class="col-sm-3 control-label">TEARDOWN TIMING</label>
                 <div class="col-sm-9">
-                  <div class="radio">
-                    <label>
-                      <input type="radio" name="teardown-timing" id="teardown-timing-1" value="weekday" checked> Weekday 9am - 6pm
+                  <div data-toggle="buttons">
+                    <label class="btn btn-success active custom-radio">
+                      <input type="radio" name="teardown-timing" id="teardown-timing-1" value="weekday" checked>
+                      <span class="fa fa-circle"></span>
                     </label>
-                    <label>
-                      <input type="radio" name="teardown-timing" id="teardown-timing-2" value="weekend"> Weekend / Public Holidays / 6pm - 9am
+                    Weekday 9am - 6pm
+                    <br>
+                    <label class="btn btn-success custom-radio">
+                      <input type="radio" name="teardown-timing" id="teardown-timing-2" value="weekend">
+                      <span class="fa fa-circle"></span>
                     </label>
+                    Weekend / Public Holidays / 6pm - 9am
                   </div>
                 </div>
               </div>
+              <div class="alert alert-success event-date-alert hidden" role="alert"><i class="fa fa-exclamation-circle"></i> Oops you need to select the event date!</div>
               <hr class="quote-hr">
               <div class="form-group">
-                <div class="col-sm-7 estimated-cost">
+                <div class="col-xs-7 estimated-cost">
                   <p>Estimated Cost</p>
                   <h3>SGD <span class="calculated-cost">0</span></h3>
-                  <p>Please note that the above cost estimate is a close indicative and might fluctuate depend on your additional requests</p>
                 </div>
-                <div class="col-sm-5 text-right">
-                  <button data-toggle="collapse" data-target="#user-form" class="btn btn-default submit-job-btn">Lets Go</button>
+                <div class="col-xs-5 text-right">
+                  <a data-toggle="collapse" data-target="#user-form" class="btn btn-default submit-job-btn">Lets Go</a>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-xs-12">
+                  <p>Please note that the above cost estimate is a close indicative and might fluctuate depend on your additional requests</p>
                 </div>
               </div>
               <div id="user-form" class="collapse">
                 <div class="form-group">
                   <div class="col-xs-12">
                     <hr class="quote-hr">
-                    <textarea class="form-control" rows="3" id="instructions" placeholder="ANY ADDITIONAL INSTRUCTIONS?"></textarea>
+                    <textarea class="form-control" rows="3" id="instructions" name="instructions" placeholder="ANY ADDITIONAL INSTRUCTIONS?"></textarea>
                   </div>
                 </div>
                 <hr class="quote-hr">
                 <div class="form-group">
                   <div class="col-xs-12">
-                    <input type="text" class="form-control" id="name" placeholder="YOUR NAME">
+                    <input type="text" class="form-control" id="name" name="name" placeholder="YOUR NAME">
                   </div>
                 </div>
                 <div class="form-group">
                   <div class="col-xs-12">
-                    <input type="text" class="form-control" id="email" placeholder="YOUR EMAIL">
+                    <input type="text" class="form-control" id="email" name="email" placeholder="YOUR EMAIL">
                   </div>
                 </div>
                 <div class="form-group">
                   <div class="col-xs-12">
-                    <input type="text" class="form-control" id="contact" placeholder="YOUR CONTACT NO">
+                    <input type="text" class="form-control" id="contact" name="contact" placeholder="YOUR CONTACT NO">
                   </div>
                 </div>
                 <div class="form-group">
@@ -410,6 +516,39 @@
     </div>
   </div>
   <!-- Quote Section End -->
+
+  <!-- Contact Us Start -->
+  <div class="container text-center">
+    <div class="row">
+      <h2>Contact Us</h2>
+    </div>
+    <form action="thank-you.html">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="form-group">
+            <input type="text" class="form-control" id="name" name="name" placeholder="YOUR NAME">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" id="email" name="email" placeholder="YOUR EMAIL">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" id="contact" name="contact" placeholder="YOUR CONTACT NO">
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="form-group">
+            <textarea class="form-control" rows="4" id="message" name="message" placeholder="YOUR MESSAGE"></textarea>
+          </div>
+          <div class="form-group text-right">
+            <img src="images/Contact-us-icon.png" alt="" class="contact-us-img">
+            <button type="submit" class="btn btn-default submit-job-btn">Submit</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <!-- Contact Us End -->
+
   <!-- FAQ Section start -->
   <div class="container-fluid" align="center" id="faq_section">
     <h2>Frequently Asked Questions</h2>
