@@ -55,13 +55,21 @@ $('#photo-wall-form, #custom-form, #stage-form').change(function() {
   } else if (name == 'custom-form') {
     height = $(`#${name} #height`).val();
     width = $(`#${name} #width`).val();
-    cost = height * width * 14 * 1.3;
+
+    print_type = $(`#${name} [name=print-type]:checked`).val();
+    base_cost = 14;
+
+    if (print_type == 'banner') {
+      base_cost = 12;
+    }
+
+    cost = height * width * base_cost * 1.3;
 
     additional_panels = $(`#${name} [name=additional-panels]:checked`).val();
 
     if (additional_panels == 'back-panels') {
       $('#side-panels').parent().removeClass('active');
-      cost += 40;
+      cost += height * width * 2.5;
     } else {
       $('#back-panels').parent().removeClass('active');
     }

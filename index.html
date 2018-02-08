@@ -26,7 +26,7 @@
 <body>
   <!-- Nav Bar Start -->
   <nav class="navbar navbar-inverse navbar-static-top">
-    <div class="container-fluid">
+    <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -45,7 +45,7 @@
       </div>
       <!-- /.navbar-collapse -->
     </div>
-    <!-- /.container-fluid -->
+    <!-- /.container -->
   </nav>
   <!-- Nav Bar End -->
   <!-- Hero Section -->
@@ -56,7 +56,7 @@
   </div>
   <!-- Hero Section End -->
   <!-- Why Us Section -->
-  <div class="container-fluid" id="whyus_section">
+  <div class="container" id="whyus_section">
     <div class="row" align="center">
       <h2>Why Us?</h2>
       <div class="col-sm-4">
@@ -213,7 +213,7 @@
                 </div>
                 <div class="form-group">
                   <div class="col-xs-12">
-                    <input type="text" class="form-control" id="contact" name="contact" placeholder="YOUR CONTACT NO">
+                    <input type="number" class="form-control" id="contact" name="contact" placeholder="YOUR CONTACT NO">
                   </div>
                 </div>
                 <div class="form-group">
@@ -335,7 +335,7 @@
                 </div>
                 <div class="form-group">
                   <div class="col-xs-12">
-                    <input type="text" class="form-control" id="contact" name="contact" placeholder="YOUR CONTACT NO">
+                    <input type="number" class="form-control" id="contact" name="contact" placeholder="YOUR CONTACT NO">
                   </div>
                 </div>
                 <div class="form-group">
@@ -383,10 +383,10 @@
                   <div class="col-xs-12">
                     <div class="radio" data-toggle="buttons">
                       <label class="btn btn-default active print-type-btn">
-                        <input type="radio" name="print-type" id="print-type-1" value="weekday" checked> Sticker
+                        <input type="radio" name="print-type" id="print-type-1" value="sticker" checked> Sticker
                       </label>
                       <label class="btn btn-default print-type-btn">
-                        <input type="radio" name="print-type" id="print-type-2" value="weekend"> Banner
+                        <input type="radio" name="print-type" id="print-type-2" value="banner"> Banner
                       </label>
                     </div>
                   </div>
@@ -500,7 +500,7 @@
                 </div>
                 <div class="form-group">
                   <div class="col-xs-12">
-                    <input type="text" class="form-control" id="contact" name="contact" placeholder="YOUR CONTACT NO">
+                    <input type="number" class="form-control" id="contact" name="contact" placeholder="YOUR CONTACT NO">
                   </div>
                 </div>
                 <div class="form-group">
@@ -518,13 +518,13 @@
   <!-- Quote Section End -->
 
   <!-- Contact Us Start -->
-  <div class="container text-center">
+  <div class="container text-center padding-btm-30">
     <div class="row">
-      <h2>Contact Us</h2>
+      <h2 class="padding-btm-30">Contact Us</h2>
     </div>
     <form action="thank-you.html">
       <div class="row">
-        <div class="col-sm-6">
+        <div class="col-sm-6 col-xs-12">
           <div class="form-group">
             <input type="text" class="form-control" id="name" name="name" placeholder="YOUR NAME">
           </div>
@@ -532,10 +532,10 @@
             <input type="text" class="form-control" id="email" name="email" placeholder="YOUR EMAIL">
           </div>
           <div class="form-group">
-            <input type="text" class="form-control" id="contact" name="contact" placeholder="YOUR CONTACT NO">
+            <input type="number" class="form-control" id="contact" name="contact" placeholder="YOUR CONTACT NO">
           </div>
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm-6 col-xs-12">
           <div class="form-group">
             <textarea class="form-control" rows="4" id="message" name="message" placeholder="YOUR MESSAGE"></textarea>
           </div>
@@ -550,55 +550,57 @@
   <!-- Contact Us End -->
 
   <!-- FAQ Section start -->
-  <div class="container-fluid" align="center" id="faq_section">
-    <h2>Frequently Asked Questions</h2>
-    <div id="faq_element" class="row">
-      <div class="col-sm-6">
-        <div class="accordion">
-          <h4 class="accordion-toggle">What/when can backdrops be used for</h4>
-          <div class="accordion-content">
-            <p>
-              Cras malesuada ultrices augue molestie risus.
-            </p>
-          </div>
-          <h4 class="accordion-toggle">How much lead time will you require?</h4>
-          <div class="accordion-content">
-            <p>
-              Lorem ipsum dolor sit amet mauris eu turpis.
-            </p>
-          </div>
-          <h4 class="accordion-toggle">How much time is needed for setup / teardown.</h4>
-          <div class="accordion-content">
-            <p>
-              Vivamus facilisisnibh scelerisque laoreet.
-            </p>
+  <section style="background: #eef0f4;">
+    <div class="container" align="center" id="faq_section">
+      <h2>Frequently Asked Questions</h2>
+      <div id="faq_element" class="row">
+        <div class="col-sm-6">
+          <div class="accordion">
+            <h4 class="accordion-toggle">What/when can backdrops be used for</h4>
+            <div class="accordion-content">
+              <p>
+                Cras malesuada ultrices augue molestie risus.
+              </p>
+            </div>
+            <h4 class="accordion-toggle">How much lead time will you require?</h4>
+            <div class="accordion-content">
+              <p>
+                Lorem ipsum dolor sit amet mauris eu turpis.
+              </p>
+            </div>
+            <h4 class="accordion-toggle">How much time is needed for setup / teardown.</h4>
+            <div class="accordion-content">
+              <p>
+                Vivamus facilisisnibh scelerisque laoreet.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-sm-6">
-        <div class="accordion">
-          <h4 class="accordion-toggle">Should I use gloss or matt laminate finish</h4>
-          <div class="accordion-content">
-            <p>
-              Cras malesuada ultrices augue molestie risus.
-            </p>
-          </div>
-          <h4 class="accordion-toggle">How much lead time will you require?</h4>
-          <div class="accordion-content">
-            <p>
-              Lorem ipsum dolor sit amet mauris eu turpis.
-            </p>
-          </div>
-          <h4 class="accordion-toggle">How much time is needed for setup / teardown.</h4>
-          <div class="accordion-content">
-            <p>
-              Vivamus facilisisnibh scelerisque laoreet.
-            </p>
+        <div class="col-sm-6">
+          <div class="accordion">
+            <h4 class="accordion-toggle">Should I use gloss or matt laminate finish</h4>
+            <div class="accordion-content">
+              <p>
+                Cras malesuada ultrices augue molestie risus.
+              </p>
+            </div>
+            <h4 class="accordion-toggle">How much lead time will you require?</h4>
+            <div class="accordion-content">
+              <p>
+                Lorem ipsum dolor sit amet mauris eu turpis.
+              </p>
+            </div>
+            <h4 class="accordion-toggle">How much time is needed for setup / teardown.</h4>
+            <div class="accordion-content">
+              <p>
+                Vivamus facilisisnibh scelerisque laoreet.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
   <!-- FAQ Section end -->
   <!-- Footer Start -->
   <footer id="myFooter">

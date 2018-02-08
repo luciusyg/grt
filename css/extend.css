@@ -1,6 +1,8 @@
 html, body {
   width: auto !important;
   overflow-x: hidden !important;
+  height: 100%;
+  margin: 0;
 }
 
 body {
@@ -17,6 +19,10 @@ body {
 
 .padding-btm-10 {
   padding-bottom: 10px;
+}
+
+.padding-btm-30 {
+  padding-bottom: 30px
 }
 
 .navbar-brand {
