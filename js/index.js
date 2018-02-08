@@ -49,7 +49,7 @@ $('#photo-wall-form, #custom-form, #stage-form').change(function() {
   teardown_timing = $(`#${name} [name=teardown-timing]:checked`).val();
 
   if (name == 'photo-wall-form') {
-    cost = 1164;
+    cost = 1164.60;
   } else if (name == 'stage-form') {
     cost = 2329.60;
   } else if (name == 'custom-form') {
