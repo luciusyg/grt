@@ -9,9 +9,6 @@ body {
 @media screen and (max-width: 768px) {
   body {
     overflow-y: scroll;
-  }
-
-  .touch {
     -webkit-overflow-scrolling: touch;
   }
 }
