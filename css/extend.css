@@ -75,7 +75,7 @@ body {
 .thankyou-section {
   color: #fff;
   background-color: #ace4da;
-  height: auto;
+  height: 100vh;
   margin-bottom: 0;
   padding: 20px;
 }
@@ -282,14 +282,13 @@ body {
   border-color: #d4d4d4;
 }
 
-.print-type-alert,
-.event-date-alert,
-.size-alert {
+.custom-alert {
   background: #4fc0e8;
   color: #fff;
   border-color: #4fc0e8;
   margin-bottom: 5px;
   padding: 10px;
+  margin-top: 10px;
 }
 
 .backdrop-col {

@@ -177,7 +177,7 @@
                   </div>
                 </div>
               </div>
-              <div class="alert alert-success event-date-alert hidden" role="alert"><i class="fa fa-exclamation-circle"></i> Oops you need to select the event date!</div>
+              <div class="alert alert-success event_date-alert hidden custom-alert" role="alert"><i class="fa fa-exclamation-circle"></i> Oops you need to select the event date!</div>
               <hr class="quote-hr">
               <div class="form-group">
                 <div class="col-xs-7 estimated-cost">
@@ -204,16 +204,19 @@
                 <div class="form-group">
                   <div class="col-xs-12">
                     <input type="text" class="form-control" id="name" name="name" placeholder="YOUR NAME">
+                    <div class="alert alert-success name-alert hidden custom-alert" role="alert"><i class="fa fa-exclamation-circle"></i> Oops… How should we address you!</div>
                   </div>
                 </div>
                 <div class="form-group">
                   <div class="col-xs-12">
                     <input type="text" class="form-control" id="email" name="email" placeholder="YOUR EMAIL">
+                    <div class="alert alert-success email-alert hidden custom-alert" role="alert"><i class="fa fa-exclamation-circle"></i> Oops… you missed this!</div>
                   </div>
                 </div>
                 <div class="form-group">
                   <div class="col-xs-12">
                     <input type="number" class="form-control" id="contact" name="contact" placeholder="YOUR CONTACT NO">
+                    <div class="alert alert-success contact-alert hidden custom-alert" role="alert"><i class="fa fa-exclamation-circle"></i> Oops… don’t worry we won’t share this</div>
                   </div>
                 </div>
                 <div class="form-group">
@@ -299,7 +302,7 @@
                   </div>
                 </div>
               </div>
-              <div class="alert alert-success event-date-alert hidden" role="alert"><i class="fa fa-exclamation-circle"></i> Oops you need to select the event date!</div>
+              <div class="alert alert-success event_date-alert hidden custom-alert" role="alert"><i class="fa fa-exclamation-circle"></i> Oops you need to select the event date!</div>
               <hr class="quote-hr">
               <div class="form-group">
                 <div class="col-xs-7 estimated-cost">
@@ -326,16 +329,19 @@
                 <div class="form-group">
                   <div class="col-xs-12">
                     <input type="text" class="form-control" id="name" name="name" placeholder="YOUR NAME">
+                    <div class="alert alert-success name-alert hidden custom-alert" role="alert"><i class="fa fa-exclamation-circle"></i> Oops… How should we address you!</div>
                   </div>
                 </div>
                 <div class="form-group">
                   <div class="col-xs-12">
                     <input type="text" class="form-control" id="email" name="email" placeholder="YOUR EMAIL">
+                    <div class="alert alert-success email-alert hidden custom-alert" role="alert"><i class="fa fa-exclamation-circle"></i> Oops… you missed this!</div>
                   </div>
                 </div>
                 <div class="form-group">
                   <div class="col-xs-12">
                     <input type="number" class="form-control" id="contact" name="contact" placeholder="YOUR CONTACT NO">
+                    <div class="alert alert-success contact-alert hidden custom-alert" role="alert"><i class="fa fa-exclamation-circle"></i> Oops… don’t worry we won’t share this</div>
                   </div>
                 </div>
                 <div class="form-group">
@@ -375,7 +381,7 @@
                   </div>
                 </div>
               </div>
-              <div class="alert alert-success size-alert hidden" role="alert"><i class="fa fa-exclamation-circle"></i> Darn... our smallest size is 8x8 ft</div>
+              <div class="alert alert-success size-alert hidden custom-alert" role="alert"><i class="fa fa-exclamation-circle"></i> Darn... our smallest size is 8x8 ft</div>
               <hr class="quote-hr">
               <div class="form-group">
                 <div class="col-xs-12 text-center">
@@ -392,7 +398,7 @@
                   </div>
                 </div>
               </div>
-              <div class="alert alert-success print-type-alert hidden" role="alert"><i class="fa fa-exclamation-circle"></i> You need to select either option</div>
+              <div class="alert alert-success print-type-alert hidden custom-alert" role="alert"><i class="fa fa-exclamation-circle"></i> You need to select either option</div>
               <hr class="quote-hr">
               <div class="row">
                 <div class="col-xs-12">
@@ -464,7 +470,7 @@
                   </div>
                 </div>
               </div>
-              <div class="alert alert-success event-date-alert hidden" role="alert"><i class="fa fa-exclamation-circle"></i> Oops you need to select the event date!</div>
+              <div class="alert alert-success event_date-alert hidden custom-alert" role="alert"><i class="fa fa-exclamation-circle"></i> Oops you need to select the event date!</div>
               <hr class="quote-hr">
               <div class="form-group">
                 <div class="col-xs-7 estimated-cost">
@@ -491,16 +497,19 @@
                 <div class="form-group">
                   <div class="col-xs-12">
                     <input type="text" class="form-control" id="name" name="name" placeholder="YOUR NAME">
+                    <div class="alert alert-success name-alert hidden custom-alert" role="alert"><i class="fa fa-exclamation-circle"></i> Oops… How should we address you!</div>
                   </div>
                 </div>
                 <div class="form-group">
                   <div class="col-xs-12">
                     <input type="text" class="form-control" id="email" name="email" placeholder="YOUR EMAIL">
+                    <div class="alert alert-success email-alert hidden custom-alert" role="alert"><i class="fa fa-exclamation-circle"></i> Oops… you missed this!</div>
                   </div>
                 </div>
                 <div class="form-group">
                   <div class="col-xs-12">
                     <input type="number" class="form-control" id="contact" name="contact" placeholder="YOUR CONTACT NO">
+                    <div class="alert alert-success contact-alert hidden custom-alert" role="alert"><i class="fa fa-exclamation-circle"></i> Oops… don’t worry we won’t share this</div>
                   </div>
                 </div>
                 <div class="form-group">
@@ -522,22 +531,26 @@
     <div class="row">
       <h2 class="padding-btm-30">Contact Us</h2>
     </div>
-    <form action="thank-you.html">
+    <form id="contact-form">
       <div class="row">
         <div class="col-sm-6 col-xs-12">
           <div class="form-group">
             <input type="text" class="form-control" id="name" name="name" placeholder="YOUR NAME">
+            <div class="alert alert-success name-alert hidden custom-alert" role="alert"><i class="fa fa-exclamation-circle"></i> Oops… How should we address you!</div>
           </div>
           <div class="form-group">
             <input type="text" class="form-control" id="email" name="email" placeholder="YOUR EMAIL">
+            <div class="alert alert-success email-alert hidden custom-alert" role="alert"><i class="fa fa-exclamation-circle"></i> Oops… you missed this!</div>
           </div>
           <div class="form-group">
             <input type="number" class="form-control" id="contact" name="contact" placeholder="YOUR CONTACT NO">
+            <div class="alert alert-success contact-alert hidden custom-alert" role="alert"><i class="fa fa-exclamation-circle"></i> Oops… don’t worry we won’t share this</div>
           </div>
         </div>
         <div class="col-sm-6 col-xs-12">
           <div class="form-group">
             <textarea class="form-control" rows="4" id="message" name="message" placeholder="YOUR MESSAGE"></textarea>
+            <div class="alert alert-success message-alert hidden custom-alert" role="alert"><i class="fa fa-exclamation-circle"></i> Don’t you want to ask something?</div>
           </div>
           <div class="form-group text-right">
             <img src="images/Contact-us-icon.png" alt="" class="contact-us-img">

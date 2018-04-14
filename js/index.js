@@ -17,6 +17,39 @@ $(document).ready(function() {
   });
 });
 
+$('#contact-form').submit(function(e) {
+  e.preventDefault();
+  name = $(this).attr('id');
+  var inputs = {
+    name: null,
+    email: null,
+    contact: null,
+    message: null
+  };
+
+  inputs.name = $(`#${name} #name`).val();
+  inputs.contact = $(`#${name} #contact`).val();
+  inputs.email = $(`#${name} #email`).val();
+  inputs.message = $(`#${name} #message`).val();
+
+  var valid = true;
+  for (var key in inputs) {
+    if (inputs[key] == '') {
+      $(`#${name} .${key}-alert`).removeClass('hidden');
+      valid = false;
+    } else {
+      $(`#${name} .${key}-alert`).addClass('hidden');
+    }
+  }
+  if (!valid) return false;
+
+  $(`#${name} button.submit-job-btn`).attr('disabled', 'disabled');
+  $(`#${name} button.submit-job-btn`).html(
+    '<i class="fa fa-circle-o-notch fa-spin"></i> Sending'
+  );
+  send_contact_email(inputs);
+});
+
 $('#photo-wall-form, #custom-form, #stage-form').submit(function(e) {
   e.preventDefault();
   name = $(this).attr('id');
@@ -50,19 +83,27 @@ $('#photo-wall-form, #custom-form, #stage-form').submit(function(e) {
   ).val();
   inputs.print_type = $(`#${name} [name=print-type]:checked`).val();
 
-  if (inputs.event_date === '') {
-    $(`#${name} .event-date-alert`).removeClass('hidden');
-    return false;
-  } else {
-    $(`#${name} .event-date-alert`).addClass('hidden');
-  }
+  var valid = true;
+  for (var key in inputs) {
+    if (inputs[key] == '') {
+      $(`#${name} .${key}-alert`).removeClass('hidden');
+      valid = false;
+    } else {
+      $(`#${name} .${key}-alert`).addClass('hidden');
+    }
 
-  if (inputs.height < 8 || inputs.width < 8) {
-    $(`#${name} .size-alert`).removeClass('hidden');
-    return false;
-  } else {
-    $(`#${name} .size-alert`).addClass('hidden');
+    if (key == 'width' || key == 'height') {
+      if (inputs.height < 8 || inputs.width < 8) {
+        $(`#${name} .size-alert`).removeClass('hidden');
+        valid = false;
+      } else {
+        $(`#${name} .size-alert`).addClass('hidden');
+      }
+    }
+
+    if (key == 'instructions') valid = true;
   }
+  if (!valid) return false;
 
   $(`#${name} button.submit-job-btn`).attr('disabled', 'disabled');
   $(`#${name} button.submit-job-btn`).html(
@@ -123,6 +164,23 @@ $('.datepicker').datepicker({
   autoclose: true,
   todayHighlight: true
 });
+
+function send_contact_email(inputs) {
+  subject = `${inputs.name} contacted you`;
+  message = `
+    <p>Email: ${inputs.email}</p>
+    <p>Contact No: ${inputs.contact}</p>
+    <p>Message: ${inputs.message}</p>`;
+
+  Email.send('orders@greate.sg', 'orders@greate.sg', subject, message, {
+    token: '10f7f77f-e414-491c-8796-42e1591c0aa4',
+    callback: function done(message) {
+      window.location = `thank-you.html?email=${inputs.email}&contact=${
+        inputs.contact
+      }`;
+    }
+  });
+}
 
 function send_email(inputs) {
   subject = `New order from ${inputs.name}`;
