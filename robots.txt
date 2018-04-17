@@ -1,0 +1,5 @@
+User-agent: * 
+Disallow: /404.shtml
+Disallow: /thank-you.html
+Disallow: /cgi-bin/
+Disallow: /playground/
